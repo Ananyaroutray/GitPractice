@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function show(){
+			var result = frmData.student.value;
+			document.getElementById("result").innerHTML=result;
+		}
+	</script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form name="frmData">
+	<center>
+		select Name :
+		<select name=""student">
+		<option value="Riddhi">Riddhi</option>
+		<option value="Ananya">Ananya</option>
+		<option value="Khafia">Khafia</option>
+		<option value="Raychal">Raychal</option>
+		</select><br></br>
+		<span id = "result"></span>
+	</center>
+	
+</form>
+</body>
+</html>

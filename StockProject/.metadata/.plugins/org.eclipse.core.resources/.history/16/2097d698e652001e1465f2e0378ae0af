@@ -1,0 +1,9 @@
+package com.java.stock;
+
+import java.util.List;
+
+public interface StockDAO {
+	List<Stock> showStockDao();
+	Stock searchStockDao(String stockId);
+
+}

@@ -1,0 +1,33 @@
+<%@page import="com.java.infinite.LibraryDAOImpl"%>
+<%@page import="com.java.infinite.ooks"%>
+<%@page import="java.sql.SQLException"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Issue Book</title>
+</head>
+<body>
+    <form method="post" action="IssueBook.jsp">
+        User Name:
+        <input type="text" name="userName" /><br/><br/>
+        Book Title:
+        <input type="text" name="bookTitle" /><br/><br/>
+        <input type="submit" value="Issue Book" />
+    </form>
+    
+    <c:if test="${param.userName != null && param.bookTitle != null}">
+        <jsp:useBean id="libraryDAO" class="com.java.infinite.LibraryDAOImpl" />
+        <c:catch var="error">
+            <c:set var="result" value="${libraryDAO.issueBook(param.userName, param.bookTitle)}" />
+        </c:catch>
+        <c:if test="${error == null}">
+            <p>${result}</p>
+        </c:if>
+        <c:if test="${error != null}">
+            <p>Error: ${error.message}</p>
+        </c:if>
+    </c:if>
+</body>
+</html>

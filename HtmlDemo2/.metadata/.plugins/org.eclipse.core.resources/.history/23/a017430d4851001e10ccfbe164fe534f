@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function ananya(){
+			alert("Hi I am Ananya...")
+		}
+	</script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="button" value="Ananya" onclick="Ananya()" />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="button" value="Sujeet" onclick="Sujeet()" />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+</body>
+</html>

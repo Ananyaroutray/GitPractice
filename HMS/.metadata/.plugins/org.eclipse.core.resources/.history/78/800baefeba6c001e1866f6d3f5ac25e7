@@ -1,0 +1,44 @@
+package com.java.jsf;
+
+import java.sql.Date;
+
+public class RoomAllocation {
+   
+    private String roomNo;
+    private String pid;   
+    private Date admissionDate;
+    private Date releaseDate;
+	public String getRoomNo() {
+		return roomNo;
+	}
+	public void setRoomNo(String roomNo) {
+		this.roomNo = roomNo;
+	}
+	public String getPid() {
+		return pid;
+	}
+	public void setPid(String pid) {
+		this.pid = pid;
+	}
+	public Date getAdmissionDate() {
+		return admissionDate;
+	}
+	public void setAdmissionDate(Date admissionDate) {
+		this.admissionDate = admissionDate;
+	}
+	public Date getReleaseDate() {
+		return releaseDate;
+	}
+	public void setReleaseDate(Date releaseDate) {
+		this.releaseDate = releaseDate;
+	}
+	public RoomAllocation(String roomNo, String pid, Date admissionDate, Date releaseDate) {
+		super();
+		this.roomNo = roomNo;
+		this.pid = pid;
+		this.admissionDate = admissionDate;
+		this.releaseDate = releaseDate;
+	}
+
+}
+

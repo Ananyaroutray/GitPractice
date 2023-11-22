@@ -1,0 +1,18 @@
+package com.java.stock;
+
+import java.util.Optional;
+import java.util.Scanner;
+
+public class StockSearchMain {
+	public static void main(String[] args) {
+		int empId;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Employee Id  ");
+		empId = sc.nextInt();
+		StockDAO dao = new StockDaoImpl();
+		{
+			Optional<Stock> stock = Optional.ofNullable(dao.searchStockDao(stock));
+			
+	}
+	}
+}

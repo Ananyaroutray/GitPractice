@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Employ.hbm.xml&apos; to &apos;hibProject/src/main/java/com.java.hib&apos;&#x0D;&#x0A;- Original project: &apos;HibExample&apos;&#x0D;&#x0A;- Destination element: &apos;hibProject/src/main/java/com.java.hib&apos;&#x0D;&#x0A;- Original element: &apos;Employ.hbm.xml&apos;" description="Copy file" destination="=hibProject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.java.hib" element1="src/main/java/com/java/hib/Employ.hbm.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1695794276012" units="0" version="1.0"/>
+</session>

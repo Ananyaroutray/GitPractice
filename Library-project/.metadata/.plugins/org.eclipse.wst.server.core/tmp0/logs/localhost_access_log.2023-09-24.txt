@@ -1,0 +1,15 @@
+127.0.0.1 - - [24/Sep/2023:23:51:56 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [24/Sep/2023:23:51:57 +0530] "GET /Library/login.jsp HTTP/1.1" 200 414
+0:0:0:0:0:0:0:1 - - [24/Sep/2023:23:51:57 +0530] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [24/Sep/2023:23:52:36 +0530] "POST /Library/login.jsp HTTP/1.1" 200 1293
+0:0:0:0:0:0:0:1 - - [24/Sep/2023:23:52:41 +0530] "GET /Library/Search.jsp HTTP/1.1" 200 2018
+0:0:0:0:0:0:0:1 - - [24/Sep/2023:23:52:46 +0530] "GET /Library/SearchPrint.jsp?searchtype=all&searchvalue= HTTP/1.1" 200 3962
+127.0.0.1 - - [24/Sep/2023:23:55:16 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [24/Sep/2023:23:55:16 +0530] "GET /Library/login.jsp HTTP/1.1" 200 414
+0:0:0:0:0:0:0:1 - - [24/Sep/2023:23:55:29 +0530] "POST /Library/login.jsp HTTP/1.1" 200 1293
+0:0:0:0:0:0:0:1 - - [24/Sep/2023:23:55:31 +0530] "GET /Library/Search.jsp HTTP/1.1" 200 2018
+0:0:0:0:0:0:0:1 - - [24/Sep/2023:23:55:39 +0530] "GET /Library/SearchPrint.jsp?searchtype=all&searchvalue= HTTP/1.1" 200 4565
+0:0:0:0:0:0:0:1 - - [24/Sep/2023:23:56:05 +0530] "GET /Library/login.jsp HTTP/1.1" 200 414
+0:0:0:0:0:0:0:1 - - [24/Sep/2023:23:56:13 +0530] "POST /Library/login.jsp HTTP/1.1" 200 1293
+0:0:0:0:0:0:0:1 - - [24/Sep/2023:23:56:15 +0530] "GET /Library/Search.jsp HTTP/1.1" 200 2018
+0:0:0:0:0:0:0:1 - - [24/Sep/2023:23:56:19 +0530] "GET /Library/SearchPrint.jsp?searchtype=all&searchvalue= HTTP/1.1" 200 4590

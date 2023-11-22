@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- Generated 17-Oct-2023, 1:50:17 pm by Hibernate Tools 3.6.2.Final -->
+<hibernate-mapping>
+
+<class
+    name="com.java.jsf.Doctor_Master"
+    table="DOCTOR_MASTER"
+>
+
+	<id 
+        name="dr_id"
+        type="java.lang.String"
+    >
+    
+<column name="DR_ID" />
+	    <generator class="assigned" />
+    </id>
+
+
+
+
+    <property
+        name="dr_name"
+	    type="java.lang.String"
+    >
+<column name="DR_NAME" />
+  </property>
+
+    <property
+        name="dept"
+	    type="java.lang.String"
+    >
+<column name="DEPT" />
+  </property>
+
+
+</class>
+
+</hibernate-mapping>

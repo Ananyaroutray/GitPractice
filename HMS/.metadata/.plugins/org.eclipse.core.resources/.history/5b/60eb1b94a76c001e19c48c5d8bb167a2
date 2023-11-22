@@ -1,0 +1,17 @@
+package com.java.jsf;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "DOCTOR_MASTER")
+public class Doctor {
+    @Id
+    private String drId;
+    private String drName;
+    private String dept;
+
+    // Constructors, getters, and setters
+}
+

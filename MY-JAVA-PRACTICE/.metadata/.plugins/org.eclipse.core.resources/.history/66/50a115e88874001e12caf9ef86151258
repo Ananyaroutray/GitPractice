@@ -1,0 +1,15 @@
+package com.java.saturday;
+
+import javax.swing.text.View;
+
+public class OnWhatsApp 
+{
+	
+
+	public void openWhatsApp(View view){
+        PackageManager pm=getPackageManager();
+            String toNumber = "919178029721"; 
+            Intent sendIntent = new Intent(Intent.ACTION_SENDTO,Uri.parse("smsto:" + "" + toNumber /*+ "?body=" + ""));
+
+}
+}

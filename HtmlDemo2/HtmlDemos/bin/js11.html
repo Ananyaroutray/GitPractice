@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function show(){
+			var str="Welcome to javascript programming...";
+			var result="";
+			result+="Leangth of string is " + str.length + "<br/>";
+			result+="First occurance of char 'o' is " + str.indexOf("o") + "<br/>";
+			result+="Char at 5th position " + str.charAt(5) + "<br/>";
+			result+="Lower case string is " + str.toLowerCase() + "<br/>";
+			result+="Uper case string is " + str.toUpperCase() + "<br/>";
+			result+="Replace string is " + str.replace("javascript","jquery") + "<br/>";
+			document.getElementById("result").innerHTML=result;
+		}
+	</script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body onload="show()">
+	<span id="result"></span>
+
+</body>
+</html>

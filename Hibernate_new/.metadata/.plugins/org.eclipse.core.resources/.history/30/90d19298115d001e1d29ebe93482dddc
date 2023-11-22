@@ -1,0 +1,51 @@
+package com.java.hib;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+public class AgentDAOImpl implements AgentDAO{
+	SessionFactory sf ;
+	Session session;
+
+	@Override
+	public List<Agent> showAgentDAO() {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Query query = session.createQuery("From Agent");
+		List<Agent> agentList = query.list();
+		return agentList;
+	}
+
+	@Override
+	public Agent searchAgentDAO(int agentId) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Query query = session.createQuery("from Employ where agentId="+agentId);
+		List<Agent> agentList = query.list();
+		if(agentList.size()>0) {
+			return agentList.get(0);
+		}
+		return null;
+	}
+
+	@Override
+	public String addAgentDao(Agent agent) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Transaction trans = session.beginTransaction();
+		session.save(agent);
+		trans.commit();
+		return "Agent Record Inserted...";
+	}
+
+	@Override
+	public String deleteAgentDao(int agentId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

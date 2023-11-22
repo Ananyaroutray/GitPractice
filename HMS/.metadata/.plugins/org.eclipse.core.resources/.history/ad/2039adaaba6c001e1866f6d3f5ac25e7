@@ -1,0 +1,40 @@
+package com.java.hms;
+
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+public class HmsDaoImpl {
+	SessionFactory sf;
+	Session session;
+	
+	public List<Doctor_Master> showDoctorDao() {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Criteria criteria = session.createCriteria(Doctor_Master.class);
+		List<Doctor_Master> doctorList = criteria.list();
+		return doctorList;
+
+	}
+
+	public List<Room_Master> showRoomsDao() {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Criteria criteria = session.createCriteria(Room_Master.class);
+		List<Room_Master> roomList = criteria.list();
+		return roomList;
+
+	}
+	
+	public String addPatientDao(Patient_Master patient) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Transaction trans = session.beginTransaction();
+		session.save(patient);
+		trans.commit();
+		return"Patient Added";
+	}
+}

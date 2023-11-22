@@ -1,0 +1,6 @@
+package com.java.dsp;
+
+public class Training {
+	abstract String getTrainingDetails();
+
+}

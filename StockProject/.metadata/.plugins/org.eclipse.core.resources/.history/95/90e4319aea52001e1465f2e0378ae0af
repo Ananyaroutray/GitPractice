@@ -1,0 +1,19 @@
+package com.java.stock;
+
+import java.sql.SQLException;
+import java.util.List;
+
+public class StockShowMain {
+	public static void main(String[] args) {
+		StockDAO dao = new StockDaoImpl();
+		
+		try {
+			List<Stock> stockList = dao.showStockDao();
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

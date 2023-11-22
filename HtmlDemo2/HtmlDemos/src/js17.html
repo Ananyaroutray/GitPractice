@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		var count=0;
+		var question=["1. C language Implemented by",
+					"2. COBOL stands for",
+					"3.What is Oops",
+					"4 what  is boxing and unboxing",
+					"5. what is Exception Handling",
+					"6. what is Favourite Sweet of Ganesh? "
+					
+		];
+		function load(){
+			document.getElementById("question").innerHTML=question[count];
+		}
+		function next(){
+			count++;
+			load();
+		}
+		function previous(){
+			count--;
+			load();
+		}
+	</script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body onload="load()">
+	<form name="frmData">
+		<p id="question"></p>
+		<br/><br/>
+		<input type="button" value="Next" onclick="next()"/> 
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="button" value="Prevoius" onclick="previous()" />
+	</form>
+	
+</body>
+</html>

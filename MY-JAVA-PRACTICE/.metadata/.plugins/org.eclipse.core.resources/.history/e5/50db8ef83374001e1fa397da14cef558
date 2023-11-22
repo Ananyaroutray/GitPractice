@@ -1,0 +1,27 @@
+package com.java.saturday;
+
+
+import java.awt.AWTException;
+import java.util.Scanner;
+
+public class App {
+	
+
+public static void main(String[] args) throws AWTException, InterruptedException
+
+{
+
+Scanner scanner=new Scanner(System.in);
+System.out.println("Enter the msg: ");
+
+String Text = scanner.nextLine();
+
+System.out.println( "How many times you want to send : ");
+int size = scanner.nextInt();
+scanner.close();
+
+System.out.println("Message Sending...Will start in 2 second:");
+
+
+
+}

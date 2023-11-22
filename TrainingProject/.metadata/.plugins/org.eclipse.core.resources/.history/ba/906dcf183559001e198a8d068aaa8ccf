@@ -1,0 +1,51 @@
+package com.java.servlets;
+
+import java.io.IOException;
+public class Customer1Servlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    /**
+     * Default constructor. 
+     */
+    public Customer1Servlet() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String firstName = request.getParameter("firstname");
+        String lastName = request.getParameter("lastname");
+        String userName = request.getParameter("userName");
+        String password = request.getParameter("passWord");
+        String email = request.getParameter("email");
+        String phoneNo = request.getParameter("phoneno");
+
+        // You can now process and use these values as needed
+        // For example, you can store them in a database, perform validation, etc.
+
+        // In this simple example, let's just print the values to the console
+        System.out.println("First Name: " + firstName);
+        System.out.println("Last Name: " + lastName);
+        System.out.println("User Name: " + userName);
+        System.out.println("Password: " + password);
+        System.out.println("Email: " + email);
+        System.out.println("Phone No: " + phoneNo);
+
+        // You can also send a response back to the user if needed
+        PrintWriter out = response.getWriter();
+        out.println("Registration successful!"); // You can customize this response message
+    }
+
+	}
+
+}

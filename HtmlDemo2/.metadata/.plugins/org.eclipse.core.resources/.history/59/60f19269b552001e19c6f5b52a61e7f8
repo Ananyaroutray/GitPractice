@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+	function validations(){
+			
+			var leaveForm = document.getElementById("leaveForm");
+            var startDate = document.getElementById("LeaveStartDate").value;
+            var endDate = document.getElementById("LeaveEndDate").value;
+            var leaveApplied = document.getElementById("leaveApplied");
+            var today = new Date();
+			var fullyear = today.getFullYear();
+			//var future= new Date("December 31," +fullyear);
+			var diff= future.getTime() - today.getTime();
+			var days=Math.ceil(diff/(1000*60*60*24));
+			//var str="Only <u>" +days +"</u> days left till new Year..." ;
+			document.getElementById("days").innerHTML = leaveApplied;
+            
+   
+            if (startDate >= endDate || startDate > endDate ) {
+                alert("Leave Start date must not be before the Leave End date");
+            } else if (startDate < currentDate) {
+                alert("Start date cannot be in the past");
+              } 
+              else{
+                alert("Leave application submitted successfully!");
+                }
+                leaveForm.reset();
+            }   
+		
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="leaveForm">
+	<table border="4" align="center">
+		<tr>
+			<th colspan="2">
+				Leave Application Form
+			</th>
+		</tr>
+		
+		<tr>
+			<th>Leave Id</th>
+			<td>
+  	
+  		<select id="leaveid" name="leave" id="leave" placeholder="leaveid" required="required">
+		<option value="Select">Select your choice</option>	  
+    	<option value="1">1</option>
+    	<option value="2">2</option>
+    	<option value="3">3</option>
+    	<option value="4">4</option>
+    	<option value="5">5</option>
+  		</select> 
+			</td>
+		</tr>
+		
+		<tr>
+			<th>Manager Name</th>
+		<td>
+  		<select id="managerName" name="managerName" >
+	    <option value="Manager">Select your manager</option>
+    	<option value="Manager1">Ram</option>
+    	<option value="Manager2">Rahul</option>
+    	<option value="Manager3">Rithee</option>
+    	<option value="Manager4">Arya</option>
+    	<option value="Manager5">Yash</option>
+  		</select> 
+			</td>
+		</tr>
+		
+		<tr>
+			<th>Leave Start Date</th>
+			<td>
+				<input type="date" name="LeaveStartDate" id="LeaveStartDate"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<th>Leave End Date</th>
+			<td>
+				<input type="date" name="LeaveEndDate" id="LeaveEndDate" />
+			</td>
+		</tr>
+		
+		<tr>
+			<th>No. Of Days</th>
+			<td>
+				<spanspa id="days"></span>
+			</td>
+		</tr>
+		
+		<tr>
+			<th>Leave Type</th>
+			<td>
+		<select id="leaveType" name="leaveType" >
+		<option value="Select">Select Your Choice</option>
+    	<option value="ML">ML</option>
+    	<option value="PL">PL</option>
+    	<option value="SL">SL</option>
+    	<option value="EL">EL</option>
+  		</select> 
+			</td>
+		</tr>
+		
+		<tr>
+			<th>Leave Status</th>
+			<td>
+		<select id="leaveStatus" name="leaveStatus" >
+		<option value="Select">Select Your Choice</option>
+    	<option value="Pending">Pending</option>
+    	<option value="Accepted">Accepted</option>
+    	<option value="Rejected">Rejected</option>
+  		</select> 
+			</td>
+		</tr>
+		
+		<tr>
+			<th>Leave Applied On</th>
+			<td>
+				<span id="leaveApplied"></span>
+			</td>
+		</tr>
+		
+		<tr>
+			<th>Manager Comments</th>
+			<td>
+		<textarea id="managerComments" name="managerComments" rows="3" cols="20" required></textarea><br><br>
+			</td>
+		</tr>
+	
+		<tr>
+			<th colspan="2">
+				<input type="button" value="Submit" onclick="validations()" />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="reset" value="Reset" />
+			</th>
+		</tr>
+
+		
+	</table>
+</form>
+
+</body>
+</html>

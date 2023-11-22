@@ -1,0 +1,12 @@
+package com.java.infinite;
+
+public class Books {
+
+	
+	private int Id;
+	private String Name;
+	private String Author; 
+	private String Edition; 
+	private String Dept;
+	private int TotalBooks; 
+}

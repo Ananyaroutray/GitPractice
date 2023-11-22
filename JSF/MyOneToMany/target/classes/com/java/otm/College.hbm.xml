@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 09-Oct-2023, 8:41:25 am by Hibernate Tools 3.5.0.Final -->
+
+<hibernate-mapping>
+    <class name="com.java.otm.College" table="college">
+        <id name="id" column="college_id">
+            <generator class="increment"/>
+        </id>
+        <property name="collegeName"/>
+        <property name="location"/>
+
+        <list name="departments" cascade="all">
+            <key column="college_id"/>
+            <index column="department_index"/>
+            <one-to-many class="com.java.otm.Department"/>
+        </list>
+    </class>
+
+    <class name="com.java.otm.Department" table="department">
+    <id name="id" column="department_id">
+        <generator class="increment"/>
+    </id>
+    <property name="departmentName"/>
+</class>
+
+</hibernate-mapping>

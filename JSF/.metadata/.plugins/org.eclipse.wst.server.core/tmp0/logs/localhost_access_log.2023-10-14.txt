@@ -1,0 +1,10 @@
+127.0.0.1 - - [14/Oct/2023:12:14:04 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [14/Oct/2023:12:14:06 +0530] "GET /ResturantManagement/OrderHistory.jsf HTTP/1.1" 200 545
+0:0:0:0:0:0:0:1 - - [14/Oct/2023:12:14:06 +0530] "GET /ResturantManagement/OrderHistory.jsf HTTP/1.1" 200 545
+0:0:0:0:0:0:0:1 - - [14/Oct/2023:12:14:06 +0530] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [14/Oct/2023:12:14:06 +0530] "GET /favicon.ico HTTP/1.1" 404 1085
+127.0.0.1 - - [14/Oct/2023:12:18:33 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [14/Oct/2023:12:18:34 +0530] "GET /ResturantManagement/OrderHistory.jsf HTTP/1.1" 200 545
+0:0:0:0:0:0:0:1 - - [14/Oct/2023:12:18:34 +0530] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [14/Oct/2023:12:19:06 +0530] "GET /ResturantManagement/PlaceOrder.jsf HTTP/1.1" 500 6674
+0:0:0:0:0:0:0:1 - - [14/Oct/2023:12:19:06 +0530] "GET /favicon.ico HTTP/1.1" 404 1085

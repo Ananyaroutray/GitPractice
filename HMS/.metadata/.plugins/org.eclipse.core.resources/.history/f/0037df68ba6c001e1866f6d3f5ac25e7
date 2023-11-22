@@ -1,0 +1,33 @@
+package com.java.jsf;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+import java.util.List;
+
+public class DoctorDAOImpl implements DoctorDAO {
+
+    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("your_persistence_unit_name");
+
+    @Override
+    public List<Doctor> getAllDoctors() {
+        EntityManager em = emf.createEntityManager();
+        try {
+            TypedQuery<Doctor> query = em.createQuery("SELECT d FROM Doctor d", Doctor.class);
+            return query.getResultList();
+        } finally {
+            em.close();
+        }
+    }
+
+    @Override
+    public Doctor getDoctorById(String drId) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            return em.find(Doctor.class, drId);
+        } finally {
+            em.close();
+        }
+    }
+}

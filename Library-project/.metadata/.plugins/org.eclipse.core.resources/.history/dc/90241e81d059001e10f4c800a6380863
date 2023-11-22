@@ -1,0 +1,8 @@
+package com.java.infinite;
+
+import java.sql.SQLException;
+
+public interface LibraryDAO {
+	String createUser(LibUsers libUsers) throws ClassNotFoundException, SQLException;
+
+}

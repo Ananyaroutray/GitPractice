@@ -1,0 +1,6 @@
+package com.java.infinite;
+
+public interface LibrayDAO {
+	String createUser(LibUsers libUsers);
+
+}

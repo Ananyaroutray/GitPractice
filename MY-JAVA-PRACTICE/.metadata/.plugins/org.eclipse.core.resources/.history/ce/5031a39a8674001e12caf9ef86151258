@@ -1,0 +1,18 @@
+package com.java.saturday;
+
+
+
+
+public class WhatsApp {
+  public static final String ACCOUNT_SID = System.getenv("ACCOUNT_SID");
+  public static final String AUTH_TOKEN = System.getenv("AUTH_TOKEN");
+  public static void main(String[] args) {
+      Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+      Message message = Message.creator(
+                      new com.twilio.type.PhoneNumber("whatsapp:<your_phone_number>"),
+                      new com.twilio.type.PhoneNumber("whatsapp:<your_twilio_whatsapp_test_number>"),
+                      "Hello, from Twilio")
+              .create();
+      System.out.println(message.getSid());
+  }
+}

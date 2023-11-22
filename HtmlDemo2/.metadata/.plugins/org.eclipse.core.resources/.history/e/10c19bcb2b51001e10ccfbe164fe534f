@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+     <p style="font-family: Tahoma;font-size: 39pt;color: lightblue;">This is sample paragraph</p>
+     <p style="font-family: 'Times New Roman', Times, serif;font-size: 34pt;color: lightpink;">This is sample paragraph</p>
+     			Hii!!  I am Ananya<hr/>
+  	<span style="color: greenyellow;font-family: 'Lucida console';font-size: 30pt;">
+		  Welcome to span</span>   			 
+
+</body>
+</html>

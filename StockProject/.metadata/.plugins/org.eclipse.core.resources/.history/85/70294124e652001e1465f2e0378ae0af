@@ -1,0 +1,9 @@
+package com.java.stock;
+
+public class Orders {
+	private String orderId;
+	private String stockId;
+	private int qntAmt;
+	private double billAmt;
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;OneToOne/src/main/java/com/java/inf/Adress.hbm.xml&apos; to &apos;Address.hbm.xml&apos;" description="Rename resource &apos;Adress.hbm.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/java/com/java/inf/Adress.hbm.xml" name="Address.hbm.xml" stamp="1696827699066" updateReferences="true"/>
+</session>

@@ -1,0 +1,17 @@
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class VendorTest {
+    private Vendor vendor1;
+    private Vendor vendor2;
+
+    @Before
+    public void setUp() {
+        // Create two Vendor objects for testing
+        vendor1 = new Vendor(1, "VendorName1", "City1", "email1@example.com", "1234567890", "Active", null, 4.5, "Good vendor");
+        vendor2 = new Vendor(2, "VendorName2", "City2", "email2@example.com", "9876543210", "Inactive", null, 3.0, "Average vendor");
+    }
+
+    
+}

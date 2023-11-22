@@ -1,0 +1,5 @@
+package com.java.saturday;
+
+public class AWTException extends Exception {
+
+}

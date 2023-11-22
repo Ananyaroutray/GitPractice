@@ -1,0 +1,17 @@
+127.0.0.1 - - [03/Oct/2023:00:35:59 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:00:36:01 +0530] "GET /Complaint/ShowComplaint.jsp HTTP/1.1" 500 4193
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:00:37:52 +0530] "GET /Complaint/ShowComplaint.jsp HTTP/1.1" 500 4193
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:00:44:44 +0530] "GET /Complaint/ShowComplaint.jsp HTTP/1.1" 500 4193
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:00:44:44 +0530] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:00:49:39 +0530] "GET /Complaint/ShowComplaint.jsp HTTP/1.1" 200 1630
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:00:49:59 +0530] "GET /Complaint/AddResolve.jsp HTTP/1.1" 500 3180
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:00:51:19 +0530] "GET /Complaint/AddComplaint.jsp HTTP/1.1" 200 897
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:00:53:21 +0530] "GET /Complaint/AddComplaint.jsp?ctype=Donot+like+Environment&cdesc=I+just+donot+like+it&sev=Donot+want+to+say HTTP/1.1" 200 897
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:00:54:41 +0530] "GET /Complaint/ShowComplaint.jsp HTTP/1.1" 500 3016
+127.0.0.1 - - [03/Oct/2023:09:23:57 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:09:23:59 +0530] "GET /Complaint/AddComplaint.jsp HTTP/1.1" 200 1880
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:09:23:59 +0530] "GET /favicon.ico HTTP/1.1" 404 1085
+127.0.0.1 - - [03/Oct/2023:09:26:42 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:09:26:43 +0530] "GET /Complaint/AddComplaint.jsp HTTP/1.1" 200 1880
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:09:28:19 +0530] "GET /Complaint/AddComplaint.jsp HTTP/1.1" 200 1880
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:09:32:39 +0530] "POST /Complaint/your_action_here HTTP/1.1" 404 1104

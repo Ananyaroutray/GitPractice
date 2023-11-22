@@ -1,0 +1,74 @@
+package com.java.test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Before;
+import org.junit.Test;
+
+
+
+
+
+
+
+public class VendorTest {
+    private Vendor vendor1;
+    private Vendor vendor2;
+
+    @Before
+    public void setUp() {
+        // Create two Vendor objects for testing
+        vendor1 = new Vendor(1, "Ananya", "Bhubaneswar", "email1@mine.com", "1234567890", "Active", null, 4.5, "Good vendor");
+        vendor2 = new Vendor(2, "Preeti", "Delhi", "email2@mine2.com", "9876543210", "Inactive", null, 3.0, "Average vendor");
+    }
+
+    @Test
+    public void testToString() {
+    	Vendor vendor = new Vendor(1, "Ananya", "Bhubaneswar", "email1@mine.com", "1234567890", "Active", null, 4.5, "Good vendor");       
+        String result = "Vendor [vendorId=1, vendorName=Ananya, vendorCity=Bhubaneswar, vendorEmail=email1@mine.com, " + "vendorMobile=1234567890, vendorStatus=Active, vendorStartedDate=null, vendorRating=4.5, vendorReview=Good vendor]";
+        assertEquals(result, vendor.toString());
+    }
+    
+    
+	@Test
+    public void testGettersAndSetters() {
+		Vendor vendor = new Vendor();
+		vendor.setVendorId(1);
+		vendor.setVendorName("Ananya");
+		vendor.setVendorCity("Bhubaneswar");
+		vendor.setVendorEmail("email1@mine.com");
+		vendor.setVendorMobile("1234567890");
+		vendor.setVendorStatus("Active");
+		vendor.setVendorStartedDate(null);
+		vendor.setVendorRating(4.5);
+		vendor.setVendorReview("Good vendor");
+		
+		assertEquals(1, vendor.getVendorId());
+		assertEquals("Ananya", vendor.getVendorName());
+		assertEquals("Bhubaneswar", vendor.getVendorCity());
+		assertEquals("email1@mine.com", vendor.getVendorEmail());
+		assertEquals("1234567890", vendor.getVendorMobile());
+		assertEquals("Active", vendor.getVendorStatus());
+		assertEquals(null, vendor.getVendorStartedDate());
+		assertEquals(4.5, vendor.getVendorRating(),0.001);
+		assertEquals("Good vendor", vendor.getVendorReview());		
+	}
+	
+	@Test
+	public void testConstructor() {
+		Vendor vendor = new Vendor();
+		assertNotNull(vendor);
+		Vendor ven = new Vendor(1, "Ananya", "Bhubaneswar", "email1@mine.com", "1234567890", "Active", null, 4.5, "Good vendor");
+		
+		assertEquals(1, ven.getVendorId());
+		assertEquals("Ananya", ven.getVendorName());
+		assertEquals("Bhubaneswar", ven.getVendorCity());
+		assertEquals("email1@mine.com", ven.getVendorEmail());
+		assertEquals("1234567890", ven.getVendorMobile());
+		assertEquals("Active", ven.getVendorStatus());
+		assertEquals(null, ven.getVendorStartedDate());
+		assertEquals(4.5, ven.getVendorRating(),0.001);
+		assertEquals("Good vendor", ven.getVendorReview());
+		
+	}
+}

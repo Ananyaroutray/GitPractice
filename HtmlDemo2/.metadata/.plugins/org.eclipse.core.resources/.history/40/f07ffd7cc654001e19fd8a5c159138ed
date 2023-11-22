@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script>
+	function validation(){
+		
+			
+			const startDate= new Date(document.getElementById("startDate").value);
+			const endDate = new Date(document.getElementById("endDate").value);
+			
+			const timeDifference = (endDate - startDate)+1;
+			const daysDifference = Math.ceil(timeDifference/ (1000 * 60 * 60 * 24));
+			document.getElementById("noofdays").value=daysDifference;
+			
+			const today = new Date();
+			if (startDate <= today){
+				//document.getElementById("result").textContent= "Leave start date must not be today or in the past.";
+				alert ("Leave start date must not be today or in the past.");
+			}else if(endDate <= startDate){
+				//document.getElementById("result").textContent= "Leave end date must be after the leave start date.";
+				alert ("Leave end date must be after the leave start date.");
+			}else {
+				//document.getElementById("result").textContent = "Leave request submitted successfully!";
+				alert ("Leave request submitted successfully!");
+			}
+			
+		};
+	
+</script>
+<body>
+	<form name="frmData">
+		<table border="3" align="center">
+			<tr>
+				<th colspan="2">
+					Leave Application Form
+				</th>
+			</tr>
+			<tr>
+				<th>LeaveId</th>
+				<td>
+					<select name="leaveId">
+	                    <option value="Choose">Choose One</option>
+						<option value="1001">1001</option>
+						<option value="1001">1002</option>
+						<option value="1001">1003</option>
+						<option value="1001">1004</option>
+						<option value="1001">1005</option>
+					</select><br/><br/>
+				</td>
+			</tr>
+			<tr>
+				<th>Manager Name</th>
+				<td>
+					<select name="student">
+						<option value="Choose">Choose One</option>
+						<option value="Pramita">Pramita</option>
+						<option value="Pramita">Ananya</option>
+						<option value="Pramita">Khafia</option>
+						<option value="Pramita">Akansha</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>Leave Start Date</th>
+				<td>
+					<input type="date" id="startDate" required="required" onchange="validation()" autofocus="autofocus" /><br/><br/>
+				</td>
+			</tr>
+			<tr>
+				<th>Leave End Date</th>
+				<td>
+					<input type="date" id="endDate" required="required" onchange="validation()"/><br/><br/>
+				</td>
+			</tr>
+			<tr>
+				<th>No Of Days</th>
+				<td>
+					<input type="number" id="noofdays" onclick="validation()"/>
+				</td>
+			</tr>
+			<tr>
+				<th>Leave Type</th>
+				<td>
+					<select name="leavetype">
+						<option value="Choose One">Choose One</option>
+						<option value="ML">ML</option>
+						<option value="ML">PL</option>
+						<option value="ML">SL</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>Leave status</th>
+				<td>
+					<select name="leavestatus">
+						<option value="Choose One">Choose One</option>
+						<option value="PANDING">PANDING</option>
+						<option value="REJECTED">REJECTED</option>
+						<option value="APROVED">APROVED</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>Leave Applied On</th>
+				<td>
+					<input type="date" name="leaveappliedon"/>
+				</td>
+			</tr>
+			<tr>
+				<th>Manager Comment</th>
+				<td>
+					<input type="text" name="managercomment"/>
+				</td>
+			</tr>
+			<tr>
+				<th colspan="2">
+					<input type="submit" value="submit"/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="reset" value="reset"/>
+				</th>
+			</tr>
+			
+		</table>
+	</form>
+	<p id="result"></p>
+
+</body>
+</html>

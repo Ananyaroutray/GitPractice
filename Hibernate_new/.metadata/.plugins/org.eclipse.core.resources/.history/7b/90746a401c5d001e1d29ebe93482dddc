@@ -1,0 +1,6 @@
+package com.java.loghib;
+
+public interface LoginDAO {
+	String addUser(Login login);
+
+}

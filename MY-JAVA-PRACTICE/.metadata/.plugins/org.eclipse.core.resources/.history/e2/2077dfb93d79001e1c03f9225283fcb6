@@ -1,0 +1,8 @@
+package com.java.dsp;
+
+public class ConnectionString {
+	private ConnectionString() {
+		private static ConnectionString cs;
+	}
+
+}

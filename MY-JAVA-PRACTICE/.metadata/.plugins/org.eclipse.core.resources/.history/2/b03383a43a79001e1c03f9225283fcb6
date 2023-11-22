@@ -1,0 +1,21 @@
+package com.java.saturday;
+
+import javax.swing.text.View;
+
+public class OnWhatsApp 
+{
+	
+
+	public void openWhatsApp(View view){
+        PackageManager pm=getPackageManager();
+        try {
+            String toNumber = "919178029721"; 
+            Intent sendIntent = new Intent(Intent.ACTION_SENDTO,Uri.parse("smsto:" + "" + toNumber /*+ "?body=" + ""));
+            sendIntent.setPackage("com.whatsapp");
+            startActivity(sendIntent);
+
+}
+catch (Exception e){
+            e.printStackTrace();
+            Toast.makeText(MainActivity.this,"it may be you dont have whats app",Toast.LENGTH_LONG).show();
+}

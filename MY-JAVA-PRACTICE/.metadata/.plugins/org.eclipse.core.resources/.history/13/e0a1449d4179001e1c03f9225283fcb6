@@ -1,0 +1,11 @@
+package com.java.dsp;
+
+public class TrainingFactory extends AbstratFactory{
+
+	@Override
+	public Training getDetails(String topic) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

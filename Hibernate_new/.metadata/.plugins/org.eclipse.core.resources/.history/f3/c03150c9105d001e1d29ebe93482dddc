@@ -1,0 +1,36 @@
+package com.java.hib;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+public class AgentDAOImpl implements AgentDAO{
+	SessionFactory sf ;
+	Session session;
+
+	@Override
+	public List<Agent> showAgentDAO() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Agent searchAgentDAO(int agentId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String addAgentDao(Agent agent) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteAgentDao(int agentId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

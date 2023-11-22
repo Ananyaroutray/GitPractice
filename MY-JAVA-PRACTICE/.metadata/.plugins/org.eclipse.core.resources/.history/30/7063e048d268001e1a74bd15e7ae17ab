@@ -1,0 +1,34 @@
+package MyProject.Practice;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class ComparatorString {
+	
+	public static void main(String[] args) {
+		List<String> in = new ArrayList<>();
+		
+		in.add("Ananya");
+		in.add("zisworya");
+		in.add("Khafia");
+		in.add("Pramita");
+		
+		Comparator<String> com = new Comparator<String>() {
+			public int compare(String str1, String str2) {
+				return str1.compareTo(str2);
+			}
+		};
+		
+		Comparator c = Collections.reverseOrder();
+	    Collections.sort(in,c);
+	    
+	    
+	    for (String string : in) {
+	    	System.out.println(string);
+			
+		}
+	}
+
+}

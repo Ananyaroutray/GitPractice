@@ -1,0 +1,12 @@
+package com.java.infinite;
+
+import java.sql.SQLException;
+import java.util.List;
+
+public interface LibraryDAO {
+	String createUser(LibUsers libUsers) throws ClassNotFoundException, SQLException;
+	int authenticate(LibUsers libUsers) throws ClassNotFoundException, SQLException;
+	List<Books> searchBooks(String searchType, String searchValue) throws SQLException, ClassNotFoundException;
+	String IssuedBook(LibUsers libUsers) throws ClassNotFoundException, SQLException;
+
+}

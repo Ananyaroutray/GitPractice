@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leave Application</title>
+    <script>
+        function validateStartDate() {
+            var LeaveStartDate = new Date(document.getElementById('Leave Start Date').value);
+            var today = new Date();
+            
+        
+            if (LeaveStartDate < today) {
+                alert("Leave start date cannot be yesterday or before today.");
+                document.getElementById('Leave Start Date').value = ''; 
+            }
+        }
+        function show(){
+			var result = frmData.leaveId.value;
+			var result = frmData.manager.value;
+			var result = frmData.leaveType.value;
+			document.getElementById("result").innerHTML=result;
+		
+    </script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="frmData">
+		<table border="2" align="center">
+			<tr>
+				<th colspan="2">
+					Leave Application Form
+				</th>
+			</tr>
+			
+			<tr>
+				<th>Leave Id</th>
+					<td>
+						<select name="leaveId" onchange="show()">
+					<option value="LeaveId">leaveId</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					</select><br></br>
+					<span id = "result"></span>
+					</td>
+			</tr>
+			
+			<tr>
+				<th>Manager Name</th>
+				<td>
+					<select name="manager" onchange="show()">
+					<option value="choose manager">choose manager</option>
+					<option value="Riddhi">Riddhi</option>
+					<option value="Ram">Ram</option>
+					<option value="Murari">Murari</option>
+					<option value="Raychal">Raychal</option>
+					</select><br></br>
+					<span id = "result"></span>
+				</td>
+			</tr>
+			<th>Leave Start Date</th>
+				<td>	 
+			<input type="date" name="Leave Start Date"
+			placeholder="Leave Start Date"
+			required="required" /> <br/><br/>
+				</td>
+			</tr>
+			<tr>
+				<th>Leave End Date</th>
+				<td>	 
+			<input type="date" name="Leave End Date"
+			placeholder="Leave End Date"
+			required="required" /> <br/><br/>
+				</td>
+			</tr>
+			<tr>
+				<th>No of Days</th>
+				<td>	 
+			<input type="text" name="No of days"
+			placeholder="No. of Days"
+			required="required" /> <br/><br/>
+				</td>
+			</tr>
+			<tr>
+				<th>Leave Type</th>
+				<td>
+					<select name="leavetype" onchange="show()">
+					<option value="leave type">Leave Type</option>
+					<option value="EL">EL</option>
+					<option value="SL">SL</option>
+					<option value="ML">ML</option>
+					<option value="PL">PL</option>
+					</select><br></br>
+					<span id = "result"></span>
+				</td>
+			</tr>
+			<tr>
+				<tr>
+				<th>Leave Status</th>
+				<td>
+					<select name="leavestatus" onchange="show()">
+					<option value="leave status">Leave Status</option>
+					<option value="Rejected">Rejected</option>
+					<option value="Accepted">Accepted</option>
+					<option value="Pending">Pending</option>
+					</select><br></br>
+					<span id = "result"></span>
+				</td>
+			</tr>
+			<tr>
+				<tr>
+				<th>Leave Applied On</th>
+				<td>	 
+			<input type="date" name="Leave Applied On"
+			placeholder="Leave Applied On"
+			required="required" /> <br/><br/>
+				</td>
+			</tr>
+			<tr>
+				<tr>
+				<th>Manager Comment</th>
+				<td>	 
+			<input type="text" name="Manager Comment"
+			placeholder="Manager Comment"
+			required="required" /> <br/><br/>
+				</td>
+			</tr>
+			<tr>
+			
+				<th colspan="2">
+					<input type="button" value="Submit" onclick="show()"/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="reset" value="Reset" />
+				</th>
+		</table>
+	</form>
+</body>
+</html>

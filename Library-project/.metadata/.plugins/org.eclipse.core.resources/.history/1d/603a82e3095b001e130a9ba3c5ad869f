@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Processing Issue</title>
+</head>
+<body>
+    <h1>Book Issued</h1>
+
+    <%
+        String bookName = request.getParameter("Name");
+        boolean issueBook = request.getParameter("issueCheckbox") != null && request.getParameter("issueCheckbox").equals("on");
+
+        // Simulated total number of books
+        int totalBooks = 100;
+
+        if (issueBook) {
+            // Reduce the total number of books if the book is issued
+            totalBooks--;
+        }
+    %>
+
+    <p>Book Name: <%= bookName %></p>
+    <p>Book Issued: <%= issueBook ? "Yes" : "No" %></p>
+    <p>Total Books Available: <%= totalBooks %></p>
+</body>
+</html>

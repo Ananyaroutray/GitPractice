@@ -1,0 +1,10 @@
+package com.java.jsf;
+
+
+
+import java.util.List;
+
+public interface DoctorDAO {
+    List<Doctor> getAllDoctors();
+    Doctor getDoctorById(String drId);
+}

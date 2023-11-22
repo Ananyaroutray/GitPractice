@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function show(){
+			var firstName, lastName, fullName;
+			firstName = frmData.firstName.value;
+			secondName = frmData.secondName.value;
+			fullName = firstName + " " +secondName;
+			frmData.result.value=fullName;
+		}
+	</script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="frmData">
+		<table border="3" align="center">
+			<tr>
+				<th colspan="2">
+					Name Form
+				</th>
+			</tr>
+			<tr>
+				<th>First Name</th>
+				<td>
+					<input type="text" name="firstName"/>
+				</td>
+			</tr>
+			<tr>
+				<th>Last Name</th>
+				<td>
+					<input type="text" name="lastName" onblur="show()"/>
+				</td>
+			</tr>
+			<tr>
+				<th>Full Name</th>
+				<td>
+					<input type="text" name="FullName"/>
+				</td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>

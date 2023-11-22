@@ -1,0 +1,26 @@
+package com.java.stock;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.List;
+
+public class StockDaoImpl implements StockDAO{
+	Connection connection;
+	PreparedStatement pst;
+	@Override
+	public String addStockDao(Stock stock) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Stock> showStockDao() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public Stock searchStockDao(String stockId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,54 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Library Book Count</title>
+</head>
+<body>
+    <h1>Library Book Count</h1>
+    
+    <%
+        String jdbcUrl = "jdbc:your_database_url_here";
+        String dbUser = "your_database_user_here";
+        String dbPassword = "your_database_password_here";
+
+        // Create an instance of your Java class that interacts with the database
+        LibraryDAO libraryManager = new LibraryDAOImpl();
+
+        // Establish a database connection
+        Connection connection = null;
+        try {
+            connection = DriverManager.getConnection(jdbcUrl, dbUser, dbPassword);
+
+            // Get the total number of books
+            int totalBooks = libraryManager.getTotalBooks(connection);
+
+            // Get the number of issued books
+            int issuedBooks = libraryManager.getIssuedBooks(connection);
+
+            // Calculate the available books
+            int availableBooks = totalBooks - issuedBooks;
+
+            // Display the results
+    %>
+            <p>Total Books: <%= totalBooks %></p>
+            <p>Issued Books: <%= issuedBooks %></p>
+            <p>Available Books: <%= availableBooks %></p>
+    <%
+        } catch (SQLException e) {
+            e.printStackTrace();
+    %>
+            <p>Error: Unable to connect to the database.</p>
+    <%
+        } finally {
+            if (connection != null) {
+                connection.close();
+            }
+        }
+    %>
+
+</body>
+</html>

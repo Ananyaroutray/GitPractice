@@ -1,0 +1,11 @@
+#Wed Sep 27 14:51:09 IST 2023
+ct=jbt
+a=finishWizard
+c=0
+s=23
+d=1695806469706
+v=2.2.500
+vl=How many times the 'Finish' button pressed during the day
+cmp=usage
+cl=org.hibernate.eclipse.jdt.ui.wizards.NewHibernateMappingFileWizard
+l=Wizard class name

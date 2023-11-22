@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function show() {
+		if (Data.chk.checked==true) {
+			document.getElementById("result").innerHTML="Present";
+			} 
+		else {
+				document.getElementById("result").innerHTML="Absent";
+				}
+	}
+	</script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h4>Show Student Details</h4>
+
+<form name="Data">
+  <input type="checkbox" name="chk" onchange="show()" /><br/><br/>
+  <label for="chk"> Ananya </label><br>
+		<span id="result"></span>
+  
+</form>
+</body>
+</html>

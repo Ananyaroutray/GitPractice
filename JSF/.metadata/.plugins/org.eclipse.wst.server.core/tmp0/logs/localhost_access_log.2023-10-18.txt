@@ -1,0 +1,9 @@
+127.0.0.1 - - [18/Oct/2023:17:27:18 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [18/Oct/2023:17:27:19 +0530] "GET /ResturantManagement/VendorLogin.jsf HTTP/1.1" 200 3137
+0:0:0:0:0:0:0:1 - - [18/Oct/2023:17:27:19 +0530] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [18/Oct/2023:17:27:50 +0530] "POST /ResturantManagement/VendorLogin.jsf;jsessionid=DD1ABD951DF779B8672F7816FEAFBA57 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [18/Oct/2023:17:27:50 +0530] "GET /ResturantManagement/VendorDashboard.jsf HTTP/1.1" 200 2981
+0:0:0:0:0:0:0:1 - - [18/Oct/2023:17:27:50 +0530] "GET /ResturantManagement/javax.faces.resource/jsf.js.jsf?ln=javax.faces HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [18/Oct/2023:17:27:53 +0530] "POST /ResturantManagement/VendorDashboard.jsf HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [18/Oct/2023:17:27:53 +0530] "GET /ResturantManagement/VendorPenOrder.jsf HTTP/1.1" 200 4740
+0:0:0:0:0:0:0:1 - - [18/Oct/2023:17:27:57 +0530] "POST /ResturantManagement/VendorPenOrder.jsf HTTP/1.1" 500 4056

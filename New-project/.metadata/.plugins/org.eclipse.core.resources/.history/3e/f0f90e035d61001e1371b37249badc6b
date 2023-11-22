@@ -1,0 +1,100 @@
+<%@page import="com.java.Complaint.ResolveDAOImpl"%>
+<%@page import="com.java.Complaint.ResolveDAO"%>
+<%@page import="com.java.Complaint.Resolve"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Resolve Complaint</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: purple;
+            color: black;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+            
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="submit_complaint.php" method="POST">
+        <h1>Resolve Complaint</h1>
+        <label for="complaintId">Complaint ID:</label>
+        <input type="text" id="complaintId" name="complaintId" required>
+
+        <label for="resolvedBy">Resolved By:</label>
+        <input type="text" id="resolvedBy" name="resolvedBy" required>
+
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" rows="4" required></textarea>
+
+        <div class="center">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <%
+    String complaintId=request.getParameter("complaintId");
+    String resolvedby=request.getParameter("resolvedBy");
+    String comment=request.getParameter("comment");
+    Resolve resolve= new Resolve();
+    resolve.setComplaintId(complaintId);
+    resolve.setResolvedBy(resolvedby);
+    resolve.setComment(comment);
+    ResolveDAO dao=new ResolveDAOImpl();
+    out.println(dao.AddResolve(resolve));
+    %>
+</body>
+</html>
